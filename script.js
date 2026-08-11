@@ -7,6 +7,68 @@ document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.classList.add('js-loaded');
 
   // ---------------------------------------------------------------------------
+  // PRELOADER SYSTEM — Troca dinâmica de ícones + barra de progresso
+  // ---------------------------------------------------------------------------
+  const preloader = document.getElementById('preloader');
+  const preloaderIcon = document.getElementById('preloaderIcon');
+  const preloaderProgress = document.getElementById('preloaderProgress');
+
+  const preloaderIcons = [
+    'cleansing.webp',
+    'cleansing-_1_.webp',
+    'cream.webp',
+    'cream-_1_.webp',
+    'serum.webp',
+    'shampoo.webp'
+  ];
+
+  let currentIconIndex = 0;
+  let iconInterval = null;
+  let progressVal = 0;
+
+  // Troca os ícones com um suave efeito pulse/fade
+  if (preloaderIcon && preloaderIcons.length > 0) {
+    iconInterval = setInterval(() => {
+      preloaderIcon.style.opacity = '0';
+      preloaderIcon.style.transform = 'scale(0.85)';
+
+      setTimeout(() => {
+        currentIconIndex = (currentIconIndex + 1) % preloaderIcons.length;
+        preloaderIcon.src = preloaderIcons[currentIconIndex];
+        preloaderIcon.style.opacity = '1';
+        preloaderIcon.style.transform = 'scale(1)';
+      }, 180);
+    }, 420);
+  }
+
+  // Progresso simulado sincronizado
+  const progressInterval = setInterval(() => {
+    if (progressVal < 90) {
+      progressVal += Math.floor(Math.random() * 15) + 5;
+      if (progressVal > 90) progressVal = 90;
+      if (preloaderProgress) preloaderProgress.style.width = progressVal + '%';
+    }
+  }, 120);
+
+  function hidePreloader() {
+    if (!preloader || preloader.classList.contains('is-hidden')) return;
+    if (preloaderProgress) preloaderProgress.style.width = '100%';
+
+    setTimeout(() => {
+      clearInterval(iconInterval);
+      clearInterval(progressInterval);
+      preloader.classList.add('is-hidden');
+      setTimeout(() => {
+        if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
+      }, 600);
+    }, 300);
+  }
+
+  // Desativa no window.load ou limite de 3.2s
+  window.addEventListener('load', hidePreloader);
+  setTimeout(hidePreloader, 3200);
+
+  // ---------------------------------------------------------------------------
   // HEADER: Esconde ao rolar para baixo, aparece ao rolar para cima
   // ---------------------------------------------------------------------------
   const mainHeader = document.getElementById('mainHeader');
