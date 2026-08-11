@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figus | Terceirização e Produção de Cosméticos Marca Própria</title>
+  <meta name="description"
+    content="Crie sua própria marca de cosméticos sem precisar de fábrica, estoque ou experiência. A Figus desenvolve, produz e envia para você escalar.">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="header" id="mainHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="logo-link">
+        <img src="LOGO-FIGUS-BRANCA.webp" alt="Figus" class="logo-img">
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <ul class="nav-links">
+          <li><a href="#hero">Início</a></li>
+          <li><a href="#solucoes">Soluções</a></li>
+          <li><a href="#mercado">Mercado</a></li>
+          <li><a href="#personalizacao">Personalização</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Hamburger Button (mobile only) -->
+      <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+    <nav>
+      <ul class="drawer-links">
+        <li><a href="#hero" class="drawer-link">Início</a></li>
+        <li><a href="#solucoes" class="drawer-link">Soluções</a></li>
+        <li><a href="#mercado" class="drawer-link">Mercado</a></li>
+        <li><a href="#personalizacao" class="drawer-link">Personalização</a></li>
+        <li><a href="#contato" class="drawer-link">Contato</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- Overlay escuro ao abrir drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Hero Section (90vh, Padding 70px) -->
+  <section id="hero" class="hero-section">
+    <!-- Vimeo Background Video (Loop infinito, sem som, sem controles/info) -->
+    <div class="hero-vimeo-wrapper">
+      <iframe
+        src="https://player.vimeo.com/video/1217247195?background=1&autoplay=1&loop=1&byline=0&title=0&muted=1"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        title="Figus - Hero Background Video">
+      </iframe>
+    </div>
+
+    <!-- Dark Gradient Overlay -->
+    <div class="hero-overlay"></div>
+
+    <!-- Container 1280px -->
+    <div class="container hero-container">
+      <!-- Left Column: Main Title -->
+      <div class="hero-left">
+        <h1 class="hero-title" data-reveal="fade-up">
+          Crie sua própria marca de cosméticos sem precisar de fábrica, estoque ou experiência.
+        </h1>
+      </div>
+
+      <!-- Right Column: Copy & Actions -->
+      <div class="hero-right">
+        <p class="hero-description" data-reveal="fade-up" data-delay="200">
+          Com nossa estrutura, você transforma sua ideia em produtos reais sem precisar montar fábrica ou equipe.
+          Desenvolvemos, produzimos e enviamos enquanto você constrói sua marca e vende, sem lidar com produção ou
+          logística.
+        </p>
+
+        <div class="hero-actions" data-reveal="fade-up" data-delay="400">
+          <!-- Primary Button (#3E4095) -->
+          <a href="#contato" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Fale conosco
+          </a>
+
+          <!-- Secondary Button (Transparent + White Border) -->
+          <a href="#saiba-mais" class="btn btn-secondary">
+            Saiba Mais
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Marquee Section -->
+  <section class="marquee-section" aria-label="Destaques Figus">
+    <div class="marquee-track">
+      <!-- Track set 1 -->
+      <div class="marquee-content">
+        <span class="marquee-item">Marca Própria •</span>
+        <span class="marquee-item">Sem Fábrica •</span>
+        <span class="marquee-item">Sem Estoque •</span>
+        <span class="marquee-item">Alta Margem •</span>
+        <span class="marquee-item">Produção Completa •</span>
+        <span class="marquee-item">Logística Integrada •</span>
+        <span class="marquee-item">Pronto para Vender •</span>
+        <span class="marquee-item">Escala com Simplicidade •</span>
+        <span class="marquee-item">Marca Própria •</span>
+        <span class="marquee-item">Sem Fábrica •</span>
+        <span class="marquee-item">Sem Estoque •</span>
+        <span class="marquee-item">Alta Margem •</span>
+        <span class="marquee-item">Produção Completa •</span>
+        <span class="marquee-item">Logística Integrada •</span>
+        <span class="marquee-item">Pronto para Vender •</span>
+        <span class="marquee-item">Escala com Simplicidade •</span>
+      </div>
+      <!-- Track set 2 (Seamless Infinite Repeat) -->
+      <div class="marquee-content">
+        <span class="marquee-item">Marca Própria •</span>
+        <span class="marquee-item">Sem Fábrica •</span>
+        <span class="marquee-item">Sem Estoque •</span>
+        <span class="marquee-item">Alta Margem •</span>
+        <span class="marquee-item">Produção Completa •</span>
+        <span class="marquee-item">Logística Integrada •</span>
+        <span class="marquee-item">Pronto para Vender •</span>
+        <span class="marquee-item">Escala com Simplicidade •</span>
+        <span class="marquee-item">Marca Própria •</span>
+        <span class="marquee-item">Sem Fábrica •</span>
+        <span class="marquee-item">Sem Estoque •</span>
+        <span class="marquee-item">Alta Margem •</span>
+        <span class="marquee-item">Produção Completa •</span>
+        <span class="marquee-item">Logística Integrada •</span>
+        <span class="marquee-item">Pronto para Vender •</span>
+        <span class="marquee-item">Escala com Simplicidade •</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 2: Differentials / Structure -->
+  <section id="solucoes" class="features-section">
+    <div class="container">
+      <!-- Section Header -->
+      <div class="features-header">
+        <span class="features-badge" data-reveal="fade-up">SOMOS MUITO MAIS DO QUE UMA FÁBRICA TERCEIRIZADA</span>
+        <h2 class="features-title" data-reveal="fade-up" data-delay="100">
+          A estrutura completa para você criar, lançar e escalar sua própria marca de cosméticos.
+        </h2>
+        <p class="features-subtitle" data-reveal="fade-up" data-delay="200">
+          Se você já vende, atende clientes ou acompanha o mercado de beleza, provavelmente já percebeu: construir uma
+          marca própria é o próximo passo natural para crescer, aumentar sua margem e ter controle real sobre o seu
+          negócio.
+        </p>
+      </div>
+
+      <!-- 4 Cards Grid -->
+      <div class="features-grid">
+        <div class="feature-card" data-reveal="fade-up" data-delay="0">
+          <h3 class="card-title">Não é só um White Label</h3>
+          <p class="card-text">
+            Produção personalizada com fórmulas exclusivas para sua marca ser única.
+          </p>
+        </div>
+
+        <div class="feature-card" data-reveal="fade-up" data-delay="150">
+          <h3 class="card-title">Baixo MOQ</h3>
+          <p class="card-text">
+            Baixa quantidade mínima de produtos para você começar mais rápido.
+          </p>
+        </div>
+
+        <div class="feature-card" data-reveal="fade-up" data-delay="300">
+          <h3 class="card-title">Velocidade de Produção</h3>
+          <p class="card-text">
+            Fábrica e laboratório próprios para acelerar o seu processo de lançamento.
+          </p>
+        </div>
+
+        <div class="feature-card" data-reveal="fade-up" data-delay="450">
+          <h3 class="card-title">Logística Integrada</h3>
+          <p class="card-text">
+            Da produção até a entrega para o seu cliente final, cuidamos de tudo pra você.
+          </p>
+        </div>
+      </div>
+
+      <!-- Section Footer / Closing Bar -->
+      <div class="features-footer" data-reveal="fade-up">
+        <p class="footer-text">
+          <span class="line-block">Você não precisa de fábrica, equipe ou conhecimento técnico para começar. Nós já
+            temos toda a estrutura</span>
+          <span class="line-block">pronta para desenvolver, produzir e enviar seus produtos. O que você precisa agora é
+            dar o próximo passo.</span>
+        </p>
+        <a href="#contato" class="btn btn-primary">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+          </svg>
+          Fale conosco
+        </a>
+      </div>
+    </div>
+
+    <!-- Dual Row Infinite Image Carousel (Full Width 100% Edge-to-Edge) -->
+    <div class="carousel-container-fullwidth">
+      <!-- Row 1: Right to Left (Horizontal Landscape Photography) -->
+      <div class="carousel-row carousel-row-left">
+        <div class="carousel-track">
+          <!-- Repeat Horizontal Set 1 x4 for seamless infinite loop -->
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_54_17.webp"
+              alt="Cosmético 1" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_56_26.webp"
+              alt="Cosmético 2" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_16_16.webp"
+              alt="Cosmético 3" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_33_08.webp"
+              alt="Cosmético 4" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_37_53.webp"
+              alt="Cosmético 5" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_38_39.webp"
+              alt="Cosmético 6" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_54_17.webp"
+              alt="Cosmético 1" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_56_26.webp"
+              alt="Cosmético 2" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_16_16.webp"
+              alt="Cosmético 3" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_33_08.webp"
+              alt="Cosmético 4" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_37_53.webp"
+              alt="Cosmético 5" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_38_39.webp"
+              alt="Cosmético 6" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_54_17.webp"
+              alt="Cosmético 1" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_56_26.webp"
+              alt="Cosmético 2" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_16_16.webp"
+              alt="Cosmético 3" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_33_08.webp"
+              alt="Cosmético 4" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_37_53.webp"
+              alt="Cosmético 5" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_38_39.webp"
+              alt="Cosmético 6" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_54_17.webp"
+              alt="Cosmético 1" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_56_26.webp"
+              alt="Cosmético 2" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_16_16.webp"
+              alt="Cosmético 3" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_33_08.webp"
+              alt="Cosmético 4" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_37_53.webp"
+              alt="Cosmético 5" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_38_39.webp"
+              alt="Cosmético 6" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+
+      <!-- Row 2: Left to Right (Horizontal Landscape Photography) -->
+      <div class="carousel-row carousel-row-right">
+        <div class="carousel-track">
+          <!-- Repeat Horizontal Set 2 x4 for seamless infinite loop -->
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_40_39.webp"
+              alt="Cosmético 7" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_41_25.webp"
+              alt="Cosmético 8" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_44_00.webp"
+              alt="Cosmético 9" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_46_44.webp"
+              alt="Cosmético 10" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_52_02.webp"
+              alt="Cosmético 11" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_58_57.webp"
+              alt="Cosmético 12" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_40_39.webp"
+              alt="Cosmético 7" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_41_25.webp"
+              alt="Cosmético 8" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_44_00.webp"
+              alt="Cosmético 9" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_46_44.webp"
+              alt="Cosmético 10" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_52_02.webp"
+              alt="Cosmético 11" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_58_57.webp"
+              alt="Cosmético 12" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_40_39.webp"
+              alt="Cosmético 7" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_41_25.webp"
+              alt="Cosmético 8" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_44_00.webp"
+              alt="Cosmético 9" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_46_44.webp"
+              alt="Cosmético 10" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_52_02.webp"
+              alt="Cosmético 11" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_58_57.webp"
+              alt="Cosmético 12" loading="lazy" decoding="async"></div>
+
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_40_39.webp"
+              alt="Cosmético 7" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_41_25.webp"
+              alt="Cosmético 8" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_44_00.webp"
+              alt="Cosmético 9" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_46_44.webp"
+              alt="Cosmético 10" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_52_02.webp"
+              alt="Cosmético 11" loading="lazy" decoding="async"></div>
+          <div class="carousel-slide"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_58_57.webp"
+              alt="Cosmético 12" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Section 3: Market Growth & Stats -->
+    <section id="mercado" class="market-section">
+      <div class="container">
+        <!-- Section 3 Header (60/40 Split, 20px gap) -->
+        <div class="market-header">
+          <div class="market-header-left" data-reveal="fade-right">
+            <span class="market-badge" data-reveal="fade-up">O MERCADO ESTÁ CRESCENDO</span>
+            <h2 class="market-title" data-reveal="fade-up" data-delay="100">
+              Você vai participar<br>ou só assistir?
+            </h2>
+          </div>
+          <div class="market-header-right" data-reveal="fade-left" data-delay="150">
+            <p class="market-description">
+              O Brasil está entre os maiores mercados de cosméticos do planeta, com crescimento consistente mesmo em
+              cenários econômicos desafiadores. O avanço das marcas independentes, influenciadores e vendas digitais
+              abriu espaço para novos empreendedores entrarem com força sem precisar de grandes estruturas.
+            </p>
+          </div>
+        </div>
+
+        <!-- 3 Stat Cards Grid -->
+        <div class="market-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">4º</div>
+            <h3 class="stat-subtitle">maior mercado de beleza do mundo</h3>
+            <p class="stat-text">
+              O Brasil ocupa posição de destaque global no consumo de cosméticos, fragrâncias e higiene pessoal.
+            </p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">+ R$ 130</div>
+            <h3 class="stat-subtitle">bilhões por ano</h3>
+            <p class="stat-text">
+              O setor movimenta mais de R$130 bilhões anuais, com crescimento contínuo impulsionado por inovação e demanda recorrente.
+            </p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-number">+ 9.6%</div>
+            <h3 class="stat-subtitle">crescimento anual</h3>
+            <p class="stat-text">
+              O setor de beleza no Brasil apresentou crescimento próximo de dois dígitos recentemente, mesmo diante de
+              cenários econômicos instáveis.
+            </p>
+          </div>
+        </div>
+
+        <!-- Video Wrapper with 3D Scroll Tilt Animation -->
+        <div class="video-container-3d" id="video3dContainer">
+          <div class="video-card-3d" id="video3dCard">
+            <div class="vimeo-wrapper">
+              <iframe
+                src="https://player.vimeo.com/video/1217101993?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media"
+                allowfullscreen title="Figus - Sua marca de cosméticos" id="vimeoPlayer">
+              </iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section 3 Footer / Closing Bar -->
+        <div class="market-footer" data-reveal="fade-up">
+          <p class="footer-text">
+            <span class="line-block">Agora que você entende como funciona, o próximo passo é simples: começar a
+              construir a sua marca.</span>
+            <span class="line-block">Clique no botão e veja como dar o primeiro passo para ter sua própria marca de
+              cosméticos.</span>
+          </p>
+          <a href="#contato" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Fale conosco
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4: Process End-to-End Tabs -->
+    <section id="processo" class="process-section">
+      <div class="container">
+
+        <!-- Section 4 Header (60/40 Split) -->
+        <div class="process-header">
+          <div class="process-header-left" data-reveal="fade-right">
+            <span class="process-badge" data-reveal="fade-up">PROCESSO DE PONTA A PONTA</span>
+            <h2 class="process-title" data-reveal="fade-up" data-delay="100">
+              Tudo o que você precisa para lançar e escalar sua marca, em um só lugar
+            </h2>
+          </div>
+          <div class="process-header-right" data-reveal="fade-left" data-delay="150">
+            <p class="process-description" data-reveal="fade-up" data-delay="200">
+              Da criação dos produtos até a entrega final ao cliente, integramos todas as etapas para que você não
+              precise se preocupar com operação, fornecedores ou processos complexos.
+            </p>
+          </div>
+        </div>
+
+        <!-- Tab Navigation -->
+        <div class="tabs-nav" role="tablist">
+          <button class="tab-btn active" data-tab="desenvolvimento" role="tab" aria-selected="true"
+            aria-controls="tab-desenvolvimento">
+            Desenvolvimento
+          </button>
+          <button class="tab-btn" data-tab="producao" role="tab" aria-selected="false" aria-controls="tab-producao">
+            Produção
+          </button>
+          <button class="tab-btn" data-tab="venda" role="tab" aria-selected="false" aria-controls="tab-venda">
+            Venda
+          </button>
+          <button class="tab-btn" data-tab="logistica" role="tab" aria-selected="false" aria-controls="tab-logistica">
+            Logística
+          </button>
+        </div>
+
+        <!-- Tab Panels -->
+        <div class="tabs-panels">
+
+          <!-- Tab 1: Desenvolvimento -->
+          <div class="tab-panel active" id="tab-desenvolvimento" role="tabpanel">
+            <div class="tab-content">
+              <div class="tab-image">
+                <img
+                  src="https://estrategistajoao.com/wp-content/uploads/2026/04/A_team_of_scientists_working_202604291117-1024x572.webp"
+                  alt="Equipe de cientistas desenvolvendo cosméticos" loading="lazy" decoding="async">
+              </div>
+              <div class="tab-text">
+                <h3 class="tab-title">Sua marca começa aqui</h3>
+                <p class="tab-description">Transformamos sua ideia em produtos reais, com formulações pensadas para o
+                  seu público e posicionamento de marca.</p>
+                <ul class="tab-list">
+                  <li>Criação de fórmulas alinhadas ao seu público</li>
+                  <li>Possibilidade de personalização da linha</li>
+                  <li>Apoio técnico sem necessidade de conhecimento prévio</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 2: Produção -->
+          <div class="tab-panel" id="tab-producao" role="tabpanel">
+            <div class="tab-content">
+              <div class="tab-image">
+                <img
+                  src="https://estrategistajoao.com/wp-content/uploads/2026/04/Close-up_of_a_cosmetic_filling_202604291119-1024x572.webp"
+                  alt="Linha de produção de cosméticos" loading="lazy" decoding="async">
+              </div>
+              <div class="tab-text">
+                <h3 class="tab-title">Qualidade profissional sem estrutura própria</h3>
+                <p class="tab-description">Cuidamos de toda a fabricação dos seus produtos com padrão profissional,
+                  garantindo qualidade, consistência e segurança.</p>
+                <ul class="tab-list">
+                  <li>Produção com controle de qualidade</li>
+                  <li>Escala conforme o crescimento da sua marca</li>
+                  <li>Sem necessidade de estrutura própria</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 3: Venda -->
+          <div class="tab-panel" id="tab-venda" role="tabpanel">
+            <div class="tab-content">
+              <div class="tab-image">
+                <img
+                  src="https://estrategistajoao.com/wp-content/uploads/2026/04/A_woman_browsing_a_cosmetics_202604291126-1024x572.webp"
+                  alt="Mulher navegando em loja de cosméticos" loading="lazy" decoding="async">
+              </div>
+              <div class="tab-text">
+                <h3 class="tab-title">Foque no crescimento, não na operação</h3>
+                <p class="tab-description">Você foca em construir sua marca e vender, enquanto toda a base operacional
+                  já está pronta para sustentar seu crescimento.</p>
+                <ul class="tab-list">
+                  <li>Liberdade para focar em marketing e vendas</li>
+                  <li>Mais controle sobre preço e margem</li>
+                  <li>Marca própria fortalecendo sua autoridade</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Tab 4: Logística -->
+          <div class="tab-panel" id="tab-logistica" role="tabpanel">
+            <div class="tab-content">
+              <div class="tab-image">
+                <img
+                  src="https://estrategistajoao.com/wp-content/uploads/2026/04/A_customer_unboxing_a_premium_202604291127-1024x572.webp"
+                  alt="Cliente desembalando produto premium" loading="lazy" decoding="async">
+              </div>
+              <div class="tab-text">
+                <h3 class="tab-title">Entrega eficiente sem complicação</h3>
+                <p class="tab-description">Armazenamos e enviamos seus produtos diretamente para o cliente, garantindo
+                  agilidade e uma experiência profissional.</p>
+                <ul class="tab-list">
+                  <li>Envio direto ao consumidor final</li>
+                  <li>Redução de custos e complexidade logística</li>
+                  <li>Operação pronta para escalar</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /.tabs-panels -->
+
+        <!-- Section 4 Footer CTA -->
+        <div class="process-footer" data-reveal="fade-up">
+          <p class="process-footer-text">
+            <span class="line-block">Se você quer sair da ideia e realmente colocar sua marca no mercado, essa é a forma
+              mais simples</span>
+            <span class="line-block">e segura de fazer isso hoje. Fale com nosso time e descubra como lançar sua marca
+              de cosméticos.</span>
+          </p>
+          <a href="#contato" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Fale conosco
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 5: Customization & Mockup Form (Glassmorphism & Parallax) -->
+    <section id="personalizacao" class="custom-section">
+      <!-- Parallax Background Grid (3x3 = 9 images) -->
+      <div class="parallax-bg-wrapper">
+        <div class="parallax-bg-grid" id="parallaxGrid">
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_54_17.webp"
+              alt="Embalagem 1" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 15_56_26.webp"
+              alt="Embalagem 2" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_16_16.webp"
+              alt="Embalagem 3" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_33_08.webp"
+              alt="Embalagem 4" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_37_53.webp"
+              alt="Embalagem 5" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_38_39.webp"
+              alt="Embalagem 6" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_40_39.webp"
+              alt="Embalagem 7" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_41_25.webp"
+              alt="Embalagem 8" loading="lazy" decoding="async"></div>
+          <div class="parallax-item"><img
+              src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens horizontais/ChatGPT Image 31 de jul. de 2026, 17_44_00.webp"
+              alt="Embalagem 9" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="parallax-overlay"></div>
+      </div>
+
+      <div class="container relative-container">
+        <!-- Glassmorphism Card -->
+        <div class="glass-card">
+          <span class="glass-badge" data-reveal="fade-up">PERSONALIZAÇÃO</span>
+          <h2 class="glass-title" data-reveal="fade-up" data-delay="100">Quer ver como o seu produto<br>ficaria na prática?</h2>
+          <p class="glass-description" data-reveal="fade-up" data-delay="200">
+            <span class="line-block">Preencha o formulário abaixo e envie sua logo para nós.</span>
+            <span class="line-block">Nossa equipe irá criar um mockup personalizado pra você.</span>
+          </p>
+
+          <!-- White Form Container -->
+          <form class="glass-form" id="mockupForm" action="#" method="POST">
+            <div class="form-row form-row-top">
+              <div class="form-group">
+                <label for="formNome">Nome</label>
+                <input type="text" id="formNome" name="nome" placeholder="Nome" required>
+              </div>
+              <div class="form-group">
+                <label for="formEmail">E-mail</label>
+                <input type="email" id="formEmail" name="email" placeholder="E-mail" required>
+              </div>
+              <div class="form-group">
+                <label for="formWhatsapp">WhatsApp</label>
+                <input type="tel" id="formWhatsapp" name="whatsapp" placeholder="(DDD)+Número" required>
+              </div>
+            </div>
+
+            <div class="form-row form-row-bottom">
+              <div class="form-group form-group-color">
+                <label for="formCor">Cor principal</label>
+                <input type="text" id="formCor" name="cor" placeholder="Insira o código aqui. Exemplo: #3E4095">
+              </div>
+              <div class="form-group form-group-file">
+                <label for="formLogo">Sua logo</label>
+                <div class="file-input-wrapper">
+                  <input type="file" id="formLogo" name="logo" accept="image/*,.pdf,.ai,.psd" class="file-input-hidden">
+                  <label for="formLogo" class="file-input-btn">Escolher arquivo</label>
+                  <span class="file-input-name" id="fileName">Nenhum arquivo escolhido</span>
+                </div>
+              </div>
+              <div class="form-group form-group-btn">
+                <button type="submit" class="btn btn-primary form-submit-btn">Enviar</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 6: Custom Brand & Vertical Image Carousel -->
+    <section id="sua-marca" class="custom-brand-section">
+      <div class="container">
+        <!-- Section 6 Centered Header -->
+        <div class="brand-header">
+          <span class="brand-badge" data-reveal="fade-up">SUA MARCA, DO SEU JEITO</span>
+          <h2 class="brand-title" data-reveal="fade-up" data-delay="100">Você imagina, a gente<br>transforma em produto.</h2>
+          <p class="brand-subtitle" data-reveal="fade-up" data-delay="200">Desenvolvemos cosméticos sob medida para a sua marca, da ideia à fórmula final.</p>
+
+          <div class="brand-footer-bar" data-reveal="fade-up">
+            <p class="brand-footer-text">
+              <span class="line-block">Você não precisa adaptar seu sonho a um catálogo pronto. Aqui, o</span>
+              <span class="line-block">produto nasce com a sua identidade, seu público e seu posicionamento.</span>
+            </p>
+            <a href="#contato" class="btn btn-primary">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path
+                  d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+              </svg>
+              Fale conosco
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Row Vertical Infinite Image Carousel (Full Width 100% Edge-to-Edge) -->
+      <div class="carousel-container-fullwidth single-row-carousel-container">
+        <div class="carousel-row carousel-row-left">
+          <div class="carousel-track">
+            <!-- Repeat Vertical Set x4 for seamless infinite loop -->
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                alt="Produto 1" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                alt="Produto 2" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                alt="Produto 3" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                alt="Produto 4" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                alt="Produto 5" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                alt="Produto 6" loading="lazy" decoding="async"></div>
+
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                alt="Produto 1" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                alt="Produto 2" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                alt="Produto 3" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                alt="Produto 4" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                alt="Produto 5" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                alt="Produto 6" loading="lazy" decoding="async"></div>
+
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                alt="Produto 1" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                alt="Produto 2" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                alt="Produto 3" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                alt="Produto 4" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                alt="Produto 5" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                alt="Produto 6" loading="lazy" decoding="async"></div>
+
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                alt="Produto 1" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                alt="Produto 2" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                alt="Produto 3" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                alt="Produto 4" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                alt="Produto 5" loading="lazy" decoding="async"></div>
+            <div class="carousel-slide slide-vertical"><img
+                src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                alt="Produto 6" loading="lazy" decoding="async"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 7: How It Works / Steps -->
+    <section id="como-funciona" class="how-it-works-section">
+      <div class="container">
+        <!-- Section 7 Centered Header -->
+        <div class="how-header">
+          <span class="how-badge" data-reveal="fade-up">COMO FUNCIONA</span>
+          <h2 class="how-title" data-reveal="fade-up" data-delay="100"><span class="line-block">Criar sua própria linha de cosméticos</span><span
+              class="line-block">é mais simples do que parece</span></h2>
+          <p class="how-subtitle">
+            Nós cuidamos de todo o processo, do conceito à produção. Você foca na sua marca, enquanto a gente transforma
+            sua ideia em um produto pronto para o mercado.
+          </p>
+        </div>
+
+        <!-- 3 Step Cards Grid -->
+        <div class="how-steps-grid">
+          <div class="step-card" data-reveal="fade-up" data-delay="0">
+            <div class="step-badge">1</div>
+            <h3 class="step-title">Apresente a sua ideia</h3>
+            <p class="step-text">
+              Preencha o formulário especificando o que você pretende atender em público e objetivos. Com essas
+              informações, conseguimos entender exatamente o que você quer construir.
+            </p>
+          </div>
+
+          <div class="step-card" data-reveal="fade-up" data-delay="150">
+            <div class="step-badge">2</div>
+            <h3 class="step-title">Desenvolvemos sua fórmula e conceito</h3>
+            <p class="step-text">
+              Nossa equipe cria uma proposta personalizada com formulação, características do produto e direcionamento
+              da sua linha.
+            </p>
+          </div>
+
+          <div class="step-card" data-reveal="fade-up" data-delay="300">
+            <div class="step-badge">3</div>
+            <h3 class="step-title">Produção e entrega da sua marca</h3>
+            <p class="step-text">
+              Após aprovação, iniciamos a produção e entregamos seu produto pronto para venda, com qualidade e padrão
+              profissional.
+            </p>
+          </div>
+        </div>
+
+        <!-- Section 7 Footer CTA -->
+        <div class="how-footer" data-reveal="fade-up">
+          <p class="how-footer-text">
+            <span class="line-block">Se você quer sair da ideia e realmente colocar sua marca no mercado, essa é a forma
+              mais simples</span>
+            <span class="line-block">e segura de fazer isso hoje. Fale com nosso time e descubra como lançar sua marca
+              de cosméticos.</span>
+          </p>
+          <a href="#contato" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Fale conosco
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 8: Start Now & 3-Column Vertical Infinite Marquee -->
+    <section id="comece-agora" class="start-now-section">
+      <div class="container start-now-container">
+        <!-- Left Column: Copy & CTA -->
+        <div class="start-now-left">
+          <span class="start-now-badge" data-reveal="fade-up">COMECE AGORA MESMO</span>
+          <h2 class="start-now-title" data-reveal="fade-up" data-delay="100">Sua própria linha de cosméticos completa</h2>
+          <p class="start-now-description" data-reveal="fade-up" data-delay="200">
+            Desenvolvemos diferentes tipos de produtos para que você possa construir uma marca sólida, alinhada ao seu
+            público e pronta para crescer.
+          </p>
+          <a href="#contato" class="btn btn-primary">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Fale conosco
+          </a>
+        </div>
+
+        <!-- Right Column: 3-Column Vertical Infinite Scrolling Gallery -->
+        <div class="start-now-right">
+          <div class="vertical-marquee-wrapper">
+            <!-- Column 1: Top to Bottom (Down) -->
+            <div class="v-column">
+              <div class="v-track v-track-down">
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                    alt="Embalagem 1" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                    alt="Embalagem 2" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                    alt="Embalagem 3" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                    alt="Embalagem 4" loading="lazy" decoding="async"></div>
+
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_46.webp"
+                    alt="Embalagem 1" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_11_55.webp"
+                    alt="Embalagem 2" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_03.webp"
+                    alt="Embalagem 3" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_12_45.webp"
+                    alt="Embalagem 4" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+
+            <!-- Column 2: Bottom to Top (Up) -->
+            <div class="v-column">
+              <div class="v-track v-track-up">
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                    alt="Embalagem 5" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                    alt="Embalagem 6" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_36_08.webp"
+                    alt="Embalagem 7" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_37_41.webp"
+                    alt="Embalagem 8" loading="lazy" decoding="async"></div>
+
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_22_41.webp"
+                    alt="Embalagem 5" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_26_24.webp"
+                    alt="Embalagem 6" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_36_08.webp"
+                    alt="Embalagem 7" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_37_41.webp"
+                    alt="Embalagem 8" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+
+            <!-- Column 3: Top to Bottom (Down) -->
+            <div class="v-column">
+              <div class="v-track v-track-down">
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_46_29.webp"
+                    alt="Embalagem 9" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_54_57.webp"
+                    alt="Embalagem 10" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_57_11.webp"
+                    alt="Embalagem 11" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_58_30.webp"
+                    alt="Embalagem 12" loading="lazy" decoding="async"></div>
+
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_46_29.webp"
+                    alt="Embalagem 9" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_54_57.webp"
+                    alt="Embalagem 10" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_57_11.webp"
+                    alt="Embalagem 11" loading="lazy" decoding="async"></div>
+                <div class="v-slide"><img
+                    src="IMAGENS DE EMBALAGENS PARA SITE FIGUS/Imagens Verticais/ChatGPT Image 31 de jul. de 2026, 16_58_30.webp"
+                    alt="Embalagem 12" loading="lazy" decoding="async"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 9: Contact / Respondi Form (Purple Background) -->
+    <section id="contato" class="contact-section">
+      <div class="container contact-container">
+
+        <!-- Section Header (Centered) -->
+        <div class="contact-header">
+          <span class="contact-badge" data-reveal="fade-up">COMECE SUA MARCA AGORA</span>
+          <h2 class="contact-title" data-reveal="fade-up" data-delay="100"><span class="line-block">Dê o primeiro passo para criar</span><span
+              class="line-block">sua marca de cosméticos</span></h2>
+          <p class="contact-description" data-reveal="fade-up" data-delay="200">
+            Preencha o formulário e nossa equipe vai te mostrar como transformar sua ideia em uma marca pronta para
+            vender.
+          </p>
+        </div>
+
+        <!-- Respondi Form Embed -->
+        <div class="contact-form-wrapper" data-reveal="fade-up" data-delay="100">
+          <div data-respondi-container="" data-respondi-mode="regular"
+            data-respondi-src="https://form.respondi.app/uwEbRbbq" data-respondi-width="100%"
+            data-respondi-height="600px"></div>
+          <script>const bodyScript = document.querySelector('body'), hasScript = document.querySelector('#respondi_src'); if (!hasScript) { const script = document.createElement('script'); script.setAttribute("async", ""); document.body.appendChild(script), script.id = 'respondi_src', script.src = 'https://embed.respondi.app/embed.js'; }</script>
+        </div>
+
+        <!-- Minimum Production Notice (after form) -->
+        <div class="contact-notice" data-reveal="fade-up" data-delay="200">
+          <svg class="contact-notice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10" />
+            <line x1="12" y1="8" x2="12" y2="12" />
+            <line x1="12" y1="16" x2="12.01" y2="16" />
+          </svg>
+          <p class="contact-notice-text">Nosso mínimo de produção é a partir de <strong>500 unidades</strong> por cada
+            produto.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Section 10: FAQ -->
+    <section id="faq" class="faq-section">
+      <div class="container faq-container">
+
+        <!-- FAQ Header -->
+        <div class="faq-header">
+          <span class="faq-badge" data-reveal="fade-up">FAQ</span>
+          <h2 class="faq-title" data-reveal="fade-up" data-delay="100">Perguntas Frequentes</h2>
+          <p class="faq-subtitle" data-reveal="fade-up" data-delay="200">
+            Sabemos que começar algo novo gera dúvidas, por isso reunimos aqui as principais respostas para te ajudar a
+            entender como tudo funciona.
+          </p>
+        </div>
+
+        <!-- FAQ Grid (3 columns x 2 rows) -->
+        <div class="faq-grid">
+          <div class="faq-item" data-reveal="fade-up" data-delay="0">
+            <h3 class="faq-question">Preciso ter experiência com cosméticos para começar?</h3>
+            <p class="faq-answer">Não. Você não precisa de conhecimento técnico ou experiência na área. Nós cuidamos de
+              todo o desenvolvimento e produção, enquanto você foca na construção da sua marca e nas vendas.</p>
+          </div>
+
+          <div class="faq-item" data-reveal="fade-up" data-delay="150">
+            <h3 class="faq-question">Preciso já ter uma marca definida?</h3>
+            <p class="faq-answer">Não necessariamente. Você pode chegar apenas com uma ideia inicial, e nós te ajudamos
+              a estruturar os produtos de acordo com o público e o posicionamento que deseja construir.</p>
+          </div>
+
+          <div class="faq-item" data-reveal="fade-up" data-delay="300">
+            <h3 class="faq-question">É necessário um grande investimento para começar?</h3>
+            <p class="faq-answer">Não. Hoje existem modelos mais acessíveis que permitem começar sem precisar montar
+              fábrica ou investir em grandes estruturas. O investimento depende do tipo de produto e da escala inicial.
+            </p>
+          </div>
+
+          <div class="faq-item" data-reveal="fade-up" data-delay="0">
+            <h3 class="faq-question">Posso personalizar os produtos ou são todos iguais?</h3>
+            <p class="faq-answer">Sim, os produtos são desenvolvidos de forma personalizada. As fórmulas,
+              características e proposta podem ser adaptadas para refletir a identidade da sua marca.</p>
+          </div>
+
+          <div class="faq-item" data-reveal="fade-up" data-delay="150">
+            <h3 class="faq-question">Como funciona a entrega dos produtos?</h3>
+            <p class="faq-answer">Nós cuidamos de toda a parte logística. Os produtos podem ser enviados diretamente
+              para você ou para o cliente final, facilitando a operação e permitindo que você escale sem se preocupar
+              com envio.</p>
+          </div>
+
+          <div class="faq-item" data-reveal="fade-up" data-delay="300">
+            <h3 class="faq-question">Em quanto tempo posso começar a vender?</h3>
+            <p class="faq-answer">O prazo pode variar de acordo com o tipo de produto e nível de personalização, mas
+              todo o processo é estruturado para ser ágil e permitir que você lance sua marca no menor tempo possível.
+            </p>
+          </div>
+        </div>
+
+        <!-- FAQ Footer CTA -->
+        <div class="faq-footer" data-reveal="fade-up">
+          <h3 class="faq-footer-title">Ainda tem dúvidas?</h3>
+          <p class="faq-footer-text">Toque no botão abaixo e <strong>entre</strong> em contato.</p>
+          <a href="#contato" class="btn btn-primary faq-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" />
+            </svg>
+            Falar com especialista
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <a href="#" class="footer-logo-link">
+          <img src="LOGO-FIGUS-BRANCA.webp" alt="Figus" class="footer-logo-img">
+        </a>
+        <p class="footer-copyright">Todos os direitos reservados Figus®</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>

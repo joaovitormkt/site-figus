@@ -1,0 +1,11 @@
+# Ignorar arquivos de vídeo pesados não utilizados no HTML
+*.MOV
+*.mov
+*.mp4
+*.MOV.*
+
+# Node / IDE / OS files
+.DS_Store
+Thumbs.db
+node_modules/
+.vscode/
