@@ -1,8 +1,13 @@
-# Ignorar arquivos de vídeo pesados não utilizados no HTML
+# Ignorar vídeos pesados
 *.MOV
 *.mov
 *.mp4
 *.MOV.*
+
+# Ignorar imagens originais PNG/JPG não utilizadas no HTML (HTML usa apenas WebP)
+IMAGENS DE EMBALAGENS PARA SITE FIGUS/**/*.png
+IMAGENS DE EMBALAGENS PARA SITE FIGUS/**/*.jpg
+IMAGENS DE EMBALAGENS PARA SITE FIGUS/**/*.jpeg
 
 # Node / IDE / OS files
 .DS_Store
