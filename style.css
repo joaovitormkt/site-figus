@@ -446,7 +446,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, rgba(10, 11, 16, 0.05) 0%, rgba(10, 11, 16, 0.15) 45%, rgba(10, 11, 16, 0.85) 65%, rgba(10, 11, 16, 0.98) 100%);
+  background: rgba(10, 11, 16, 0.6);
   z-index: 2;
   pointer-events: none;
 }
@@ -2111,12 +2111,7 @@ body {
   font-weight: 400;
 }
 
-/* --- Degradê inferior mais escuro na Hero em telas <= 1440px (iniciando mais abaixo) --- */
-@media (max-width: 1440px) {
-  .hero-overlay {
-    background: linear-gradient(to bottom, rgba(10, 11, 16, 0.05) 0%, rgba(10, 11, 16, 0.15) 45%, rgba(10, 11, 16, 0.88) 65%, rgba(10, 11, 16, 1) 100%);
-  }
-}
+
 
 /* --- Hamburger visível e nav-desktop oculto em telas ≤ 768px --- */
 @media (max-width: 768px) {
@@ -2566,10 +2561,7 @@ body {
     padding-bottom: 50px;
   }
 
-  /* Escurecer overlay no topo para garantir legibilidade dos textos empilhados no mobile */
-  .hero-overlay {
-    background: linear-gradient(to bottom, rgba(10, 11, 16, 0.65) 0%, rgba(10, 11, 16, 0.78) 45%, rgba(10, 11, 16, 0.92) 75%, rgba(10, 11, 16, 1) 100%);
-  }
+
 
   .features-section,
   .market-section,
@@ -2692,8 +2684,4 @@ body {
 
 /* --- 5. Smartphones Pequenos (até 425px) --- */
 @media (max-width: 425px) {
-  /* Overlay com topo bem escuro para legibilidade do texto empilhado */
-  .hero-overlay {
-    background: linear-gradient(to bottom, rgba(10, 11, 16, 0.75) 0%, rgba(10, 11, 16, 0.82) 50%, rgba(10, 11, 16, 0.95) 75%, rgba(10, 11, 16, 1) 100%);
-  }
 }
