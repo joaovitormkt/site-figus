@@ -124,6 +124,10 @@ body {
   white-space: nowrap;
 }
 
+.desktop-only {
+  display: inline;
+}
+
 /* ==========================================================================
    SCROLL REVEAL ANIMATIONS (Entrada e Saída Dinâmicas no Scroll)
    ========================================================================== */
@@ -2462,6 +2466,15 @@ body {
   .line-block {
     display: inline;
     white-space: normal;
+    margin-right: 0.25em;
+  }
+
+  .line-block:last-child {
+    margin-right: 0;
+  }
+
+  .desktop-only {
+    display: none;
   }
 
   .features-section,
