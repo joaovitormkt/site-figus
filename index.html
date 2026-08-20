@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" id="htmlRoot">
 
 <head>
   <meta charset="UTF-8">
@@ -38,13 +38,22 @@
       <!-- Desktop Nav -->
       <nav class="nav-desktop">
         <ul class="nav-links">
-          <li><a href="#hero">Início</a></li>
-          <li><a href="#solucoes">Soluções</a></li>
-          <li><a href="#mercado">Mercado</a></li>
-          <li><a href="#personalizacao">Personalização</a></li>
-          <li><a href="#contato">Contato</a></li>
+          <li><a href="#hero" data-i18n="nav.home">Início</a></li>
+          <li><a href="#solucoes" data-i18n="nav.solutions">Soluções</a></li>
+          <li><a href="#mercado" data-i18n="nav.market">Mercado</a></li>
+          <li><a href="#personalizacao" data-i18n="nav.custom">Personalização</a></li>
+          <li><a href="#contato" data-i18n="nav.contact">Contato</a></li>
         </ul>
       </nav>
+
+      <!-- Language Switcher -->
+      <div class="lang-switcher" id="langSwitcher" aria-label="Selecionar idioma">
+        <button class="lang-btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="en" aria-pressed="false">EN</button>
+        <span class="lang-divider">|</span>
+        <button class="lang-btn" data-lang="es" aria-pressed="false">ES</button>
+      </div>
 
       <!-- Hamburger Button (mobile only) -->
       <button class="hamburger" id="hamburgerBtn" aria-label="Abrir menu" aria-expanded="false">
@@ -59,11 +68,11 @@
   <div class="nav-drawer" id="navDrawer" aria-hidden="true">
     <nav>
       <ul class="drawer-links">
-        <li><a href="#hero" class="drawer-link">Início</a></li>
-        <li><a href="#solucoes" class="drawer-link">Soluções</a></li>
-        <li><a href="#mercado" class="drawer-link">Mercado</a></li>
-        <li><a href="#personalizacao" class="drawer-link">Personalização</a></li>
-        <li><a href="#contato" class="drawer-link">Contato</a></li>
+        <li><a href="#hero" class="drawer-link" data-i18n="nav.home">Início</a></li>
+        <li><a href="#solucoes" class="drawer-link" data-i18n="nav.solutions">Soluções</a></li>
+        <li><a href="#mercado" class="drawer-link" data-i18n="nav.market">Mercado</a></li>
+        <li><a href="#personalizacao" class="drawer-link" data-i18n="nav.custom">Personalização</a></li>
+        <li><a href="#contato" class="drawer-link" data-i18n="nav.contact">Contato</a></li>
       </ul>
     </nav>
   </div>
@@ -86,22 +95,22 @@
     <div class="container hero-container">
       <!-- Left Column: Main Title -->
       <div class="hero-left">
-        <h1 class="hero-title" data-reveal="fade-in" data-delay="0">
+        <h1 class="hero-title" data-reveal="fade-in" data-delay="0" data-i18n="hero.title">
           Crie sua própria marca de cosméticos sem precisar de fábrica, estoque ou experiência.
         </h1>
       </div>
 
       <!-- Right Column: Copy & Actions -->
       <div class="hero-right">
-        <p class="hero-description" data-reveal="fade-in" data-delay="200">
+        <p class="hero-description" data-reveal="fade-in" data-delay="200" data-i18n="hero.desc">
           Desenvolvemos, produzimos e enviamos enquanto você constrói sua marca e vende, sem se preocupar com produção
           ou
           logística.
         </p>
 
-        <div class="hero-actions" data-reveal="fade-up-soft" data-delay="400">
+        <div class="hero-actions">
           <!-- Primary Button (#3E4095) -->
-          <a href="#contato" class="btn btn-primary">
+          <a href="#contato" class="btn btn-primary" data-i18n="hero.cta1">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -111,9 +120,7 @@
           </a>
 
           <!-- Secondary Button (Transparent + White Border) -->
-          <a href="#saiba-mais" class="btn btn-secondary">
-            Saiba Mais
-          </a>
+          <a href="#saiba-mais" class="btn btn-secondary" data-i18n="hero.cta2">Saiba Mais</a>
         </div>
       </div>
     </div>
@@ -124,41 +131,41 @@
     <div class="marquee-track">
       <!-- Track set 1 -->
       <div class="marquee-content">
-        <span class="marquee-item">Marca Própria •</span>
-        <span class="marquee-item">Sem Fábrica •</span>
-        <span class="marquee-item">Sem Estoque •</span>
-        <span class="marquee-item">Alta Margem •</span>
-        <span class="marquee-item">Produção Completa •</span>
-        <span class="marquee-item">Logística Integrada •</span>
-        <span class="marquee-item">Pronto para Vender •</span>
-        <span class="marquee-item">Escala com Simplicidade •</span>
-        <span class="marquee-item">Marca Própria •</span>
-        <span class="marquee-item">Sem Fábrica •</span>
-        <span class="marquee-item">Sem Estoque •</span>
-        <span class="marquee-item">Alta Margem •</span>
-        <span class="marquee-item">Produção Completa •</span>
-        <span class="marquee-item">Logística Integrada •</span>
-        <span class="marquee-item">Pronto para Vender •</span>
-        <span class="marquee-item">Escala com Simplicidade •</span>
+        <span class="marquee-item" data-i18n="mq.1">Marca Própria •</span>
+        <span class="marquee-item" data-i18n="mq.2">Sem Fábrica •</span>
+        <span class="marquee-item" data-i18n="mq.3">Sem Estoque •</span>
+        <span class="marquee-item" data-i18n="mq.4">Alta Margem •</span>
+        <span class="marquee-item" data-i18n="mq.5">Produção Completa •</span>
+        <span class="marquee-item" data-i18n="mq.6">Logística Integrada •</span>
+        <span class="marquee-item" data-i18n="mq.7">Pronto para Vender •</span>
+        <span class="marquee-item" data-i18n="mq.8">Escala com Simplicidade •</span>
+        <span class="marquee-item" data-i18n="mq.1">Marca Própria •</span>
+        <span class="marquee-item" data-i18n="mq.2">Sem Fábrica •</span>
+        <span class="marquee-item" data-i18n="mq.3">Sem Estoque •</span>
+        <span class="marquee-item" data-i18n="mq.4">Alta Margem •</span>
+        <span class="marquee-item" data-i18n="mq.5">Produção Completa •</span>
+        <span class="marquee-item" data-i18n="mq.6">Logística Integrada •</span>
+        <span class="marquee-item" data-i18n="mq.7">Pronto para Vender •</span>
+        <span class="marquee-item" data-i18n="mq.8">Escala com Simplicidade •</span>
       </div>
       <!-- Track set 2 (Seamless Infinite Repeat) -->
       <div class="marquee-content">
-        <span class="marquee-item">Marca Própria •</span>
-        <span class="marquee-item">Sem Fábrica •</span>
-        <span class="marquee-item">Sem Estoque •</span>
-        <span class="marquee-item">Alta Margem •</span>
-        <span class="marquee-item">Produção Completa •</span>
-        <span class="marquee-item">Logística Integrada •</span>
-        <span class="marquee-item">Pronto para Vender •</span>
-        <span class="marquee-item">Escala com Simplicidade •</span>
-        <span class="marquee-item">Marca Própria •</span>
-        <span class="marquee-item">Sem Fábrica •</span>
-        <span class="marquee-item">Sem Estoque •</span>
-        <span class="marquee-item">Alta Margem •</span>
-        <span class="marquee-item">Produção Completa •</span>
-        <span class="marquee-item">Logística Integrada •</span>
-        <span class="marquee-item">Pronto para Vender •</span>
-        <span class="marquee-item">Escala com Simplicidade •</span>
+        <span class="marquee-item" data-i18n="mq.1">Marca Própria •</span>
+        <span class="marquee-item" data-i18n="mq.2">Sem Fábrica •</span>
+        <span class="marquee-item" data-i18n="mq.3">Sem Estoque •</span>
+        <span class="marquee-item" data-i18n="mq.4">Alta Margem •</span>
+        <span class="marquee-item" data-i18n="mq.5">Produção Completa •</span>
+        <span class="marquee-item" data-i18n="mq.6">Logística Integrada •</span>
+        <span class="marquee-item" data-i18n="mq.7">Pronto para Vender •</span>
+        <span class="marquee-item" data-i18n="mq.8">Escala com Simplicidade •</span>
+        <span class="marquee-item" data-i18n="mq.1">Marca Própria •</span>
+        <span class="marquee-item" data-i18n="mq.2">Sem Fábrica •</span>
+        <span class="marquee-item" data-i18n="mq.3">Sem Estoque •</span>
+        <span class="marquee-item" data-i18n="mq.4">Alta Margem •</span>
+        <span class="marquee-item" data-i18n="mq.5">Produção Completa •</span>
+        <span class="marquee-item" data-i18n="mq.6">Logística Integrada •</span>
+        <span class="marquee-item" data-i18n="mq.7">Pronto para Vender •</span>
+        <span class="marquee-item" data-i18n="mq.8">Escala com Simplicidade •</span>
       </div>
     </div>
   </section>
@@ -168,11 +175,11 @@
     <div class="container">
       <!-- Section Header -->
       <div class="features-header">
-        <span class="features-badge" data-reveal="fade-in" data-delay="0">NUNCA FOI SÓ UM FÁBRICA</span>
-        <h2 class="features-title" data-reveal="fade-in" data-delay="140">
+        <span class="features-badge" data-reveal="fade-in" data-delay="0" data-i18n="s2.badge">NUNCA FOI SÓ UM FÁBRICA</span>
+        <h2 class="features-title" data-reveal="fade-in" data-delay="140" data-i18n="s2.title">
           A estrutura completa para você criar, lançar e escalar sua própria marca de cosméticos.
         </h2>
-        <p class="features-subtitle" data-reveal="fade-in" data-delay="280">
+        <p class="features-subtitle" data-reveal="fade-in" data-delay="280" data-i18n="s2.subtitle">
           Se você já vende, atende clientes ou acompanha o mercado de beleza, provavelmente já percebeu: construir uma
           marca própria é o próximo passo natural para crescer, aumentar sua margem e ter controle real sobre o seu
           negócio.
@@ -182,29 +189,29 @@
       <!-- 4 Cards Grid (Surgem leve e suavemente de baixo para cima) -->
       <div class="features-grid">
         <div class="feature-card" data-reveal="fade-up-soft" data-delay="420">
-          <h3 class="card-title">Não é só um White Label</h3>
-          <p class="card-text">
+          <h3 class="card-title" data-i18n="s2.card1.title">Não é só um White Label</h3>
+          <p class="card-text" data-i18n="s2.card1.text">
             Produção personalizada com fórmulas exclusivas para sua marca ser única.
           </p>
         </div>
 
         <div class="feature-card" data-reveal="fade-up-soft" data-delay="560">
-          <h3 class="card-title">Baixo MOQ</h3>
-          <p class="card-text">
+          <h3 class="card-title" data-i18n="s2.card2.title">Baixo MOQ</h3>
+          <p class="card-text" data-i18n="s2.card2.text">
             Baixa quantidade mínima de produtos para você começar mais rápido.
           </p>
         </div>
 
         <div class="feature-card" data-reveal="fade-up-soft" data-delay="700">
-          <h3 class="card-title">Velocidade de Produção</h3>
-          <p class="card-text">
+          <h3 class="card-title" data-i18n="s2.card3.title">Velocidade de Produção</h3>
+          <p class="card-text" data-i18n="s2.card3.text">
             Fábrica e laboratório próprios para acelerar o seu processo de lançamento.
           </p>
         </div>
 
         <div class="feature-card" data-reveal="fade-up-soft" data-delay="840">
-          <h3 class="card-title">Logística Integrada</h3>
-          <p class="card-text">
+          <h3 class="card-title" data-i18n="s2.card4.title">Logística Integrada</h3>
+          <p class="card-text" data-i18n="s2.card4.text">
             Da produção até a entrega para o seu cliente final, cuidamos de tudo pra você.
           </p>
         </div>
@@ -212,13 +219,13 @@
 
       <!-- Section Footer / Closing Bar -->
       <div class="features-footer" data-reveal="fade-up-soft" data-delay="980">
-        <p class="footer-text">
+        <p class="footer-text" data-i18n="s2.footer">
           <span class="line-block">Você não precisa de fábrica, equipe ou conhecimento técnico para começar. Nós já
             temos toda a estrutura</span>
           <span class="line-block">pronta para desenvolver, produzir e enviar seus produtos. O que você precisa agora é
             dar o próximo passo.</span>
         </p>
-        <a href="#contato" class="btn btn-primary">
+        <a href="#contato" class="btn btn-primary" data-i18n="cta.talk">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
             stroke-linejoin="round">
             <path
@@ -401,13 +408,13 @@
         <!-- Section 3 Header (60/40 Split, 20px gap) -->
         <div class="market-header">
           <div class="market-header-left">
-            <span class="market-badge" data-reveal="fade-in" data-delay="0">O MERCADO ESTÁ CRESCENDO</span>
-            <h2 class="market-title" data-reveal="fade-in" data-delay="140">
+            <span class="market-badge" data-reveal="fade-in" data-delay="0" data-i18n="s3.badge">O MERCADO ESTÁ CRESCENDO</span>
+            <h2 class="market-title" data-reveal="fade-in" data-delay="140" data-i18n="s3.title">
               Você vai participar<br>ou só assistir?
             </h2>
           </div>
           <div class="market-header-right">
-            <p class="market-description" data-reveal="fade-in" data-delay="280">
+            <p class="market-description" data-reveal="fade-in" data-delay="280" data-i18n="s3.desc">
               O Brasil está entre os maiores mercados de cosméticos do planeta, com crescimento consistente mesmo em
               cenários econômicos desafiadores. O avanço das marcas independentes, influenciadores e vendas digitais
               abriu espaço para novos empreendedores entrarem com força sem precisar de grandes estruturas.
@@ -419,16 +426,16 @@
         <div class="market-stats-grid">
           <div class="stat-card" data-reveal="fade-up-soft" data-delay="420">
             <div class="stat-number">4º</div>
-            <h3 class="stat-subtitle">maior mercado de beleza do mundo</h3>
-            <p class="stat-text">
+            <h3 class="stat-subtitle" data-i18n="s3.stat1.sub">maior mercado de beleza do mundo</h3>
+            <p class="stat-text" data-i18n="s3.stat1.text">
               O Brasil ocupa posição de destaque global no consumo de cosméticos, fragrâncias e higiene pessoal.
             </p>
           </div>
 
           <div class="stat-card" data-reveal="fade-up-soft" data-delay="560">
             <div class="stat-number">+ R$ 130</div>
-            <h3 class="stat-subtitle">bilhões por ano</h3>
-            <p class="stat-text">
+            <h3 class="stat-subtitle" data-i18n="s3.stat2.sub">bilhões por ano</h3>
+            <p class="stat-text" data-i18n="s3.stat2.text">
               O setor movimenta mais de R$130 bilhões anuais, com crescimento contínuo impulsionado por inovação e
               demanda recorrente.
             </p>
@@ -436,8 +443,8 @@
 
           <div class="stat-card" data-reveal="fade-up-soft" data-delay="700">
             <div class="stat-number">+ 9.6%</div>
-            <h3 class="stat-subtitle">crescimento anual</h3>
-            <p class="stat-text">
+            <h3 class="stat-subtitle" data-i18n="s3.stat3.sub">crescimento anual</h3>
+            <p class="stat-text" data-i18n="s3.stat3.text">
               O setor de beleza no Brasil apresentou crescimento próximo de dois dígitos recentemente, mesmo diante de
               cenários econômicos instáveis.
             </p>
@@ -459,11 +466,11 @@
 
         <!-- Section 3 Footer / Closing Bar -->
         <div class="market-footer" data-reveal="fade-up-soft" data-delay="0">
-          <p class="footer-text">
+          <p class="footer-text" data-i18n="s3.footer">
             Agora que você entende como funciona, é simples: <br class="desktop-only">clique no botão e dê o primeiro
             passo para lançar a sua marca.
           </p>
-          <a href="#contato" class="btn btn-primary">
+          <a href="#contato" class="btn btn-primary" data-i18n="cta.talk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -482,13 +489,13 @@
         <!-- Section 4 Header (60/40 Split) -->
         <div class="process-header">
           <div class="process-header-left">
-            <span class="process-badge" data-reveal="fade-in" data-delay="0">PROCESSO DE PONTA A PONTA</span>
-            <h2 class="process-title" data-reveal="fade-in" data-delay="140">
+            <span class="process-badge" data-reveal="fade-in" data-delay="0" data-i18n="s4.badge">PROCESSO DE PONTA A PONTA</span>
+            <h2 class="process-title" data-reveal="fade-in" data-delay="140" data-i18n="s4.title">
               Tudo o que você precisa para lançar e escalar sua marca, em um só lugar
             </h2>
           </div>
           <div class="process-header-right">
-            <p class="process-description" data-reveal="fade-in" data-delay="280">
+            <p class="process-description" data-reveal="fade-in" data-delay="280" data-i18n="s4.desc">
               Da criação dos produtos até a entrega final ao cliente, integramos todas as etapas para que você não
               precise se preocupar com operação, fornecedores ou processos complexos.
             </p>
@@ -498,16 +505,16 @@
         <!-- Tab Navigation -->
         <div class="tabs-nav" role="tablist">
           <button class="tab-btn active" data-tab="desenvolvimento" role="tab" aria-selected="true"
-            aria-controls="tab-desenvolvimento">
+            aria-controls="tab-desenvolvimento" data-i18n="s4.tab1">
             Desenvolvimento
           </button>
-          <button class="tab-btn" data-tab="producao" role="tab" aria-selected="false" aria-controls="tab-producao">
+          <button class="tab-btn" data-tab="producao" role="tab" aria-selected="false" aria-controls="tab-producao" data-i18n="s4.tab2">
             Produção
           </button>
-          <button class="tab-btn" data-tab="venda" role="tab" aria-selected="false" aria-controls="tab-venda">
+          <button class="tab-btn" data-tab="venda" role="tab" aria-selected="false" aria-controls="tab-venda" data-i18n="s4.tab3">
             Venda
           </button>
-          <button class="tab-btn" data-tab="logistica" role="tab" aria-selected="false" aria-controls="tab-logistica">
+          <button class="tab-btn" data-tab="logistica" role="tab" aria-selected="false" aria-controls="tab-logistica" data-i18n="s4.tab4">
             Logística
           </button>
         </div>
@@ -524,13 +531,13 @@
                   alt="Equipe de cientistas desenvolvendo cosméticos" loading="lazy" decoding="async">
               </div>
               <div class="tab-text">
-                <h3 class="tab-title">Sua marca começa aqui</h3>
-                <p class="tab-description">Transformamos sua ideia em produtos reais, com formulações pensadas para o
+                <h3 class="tab-title" data-i18n="s4.p1.title">Sua marca começa aqui</h3>
+                <p class="tab-description" data-i18n="s4.p1.desc">Transformamos sua ideia em produtos reais, com formulações pensadas para o
                   seu público e posicionamento de marca.</p>
                 <ul class="tab-list">
-                  <li>Criação de fórmulas alinhadas ao seu público</li>
-                  <li>Possibilidade de personalização da linha</li>
-                  <li>Apoio técnico sem necessidade de conhecimento prévio</li>
+                  <li data-i18n="s4.p1.li1">Criação de fórmulas alinhadas ao seu público</li>
+                  <li data-i18n="s4.p1.li2">Possibilidade de personalização da linha</li>
+                  <li data-i18n="s4.p1.li3">Apoio técnico sem necessidade de conhecimento prévio</li>
                 </ul>
               </div>
             </div>
@@ -545,13 +552,13 @@
                   alt="Linha de produção de cosméticos" loading="lazy" decoding="async">
               </div>
               <div class="tab-text">
-                <h3 class="tab-title">Qualidade profissional sem estrutura própria</h3>
-                <p class="tab-description">Cuidamos de toda a fabricação dos seus produtos com padrão profissional,
+                <h3 class="tab-title" data-i18n="s4.p2.title">Qualidade profissional sem estrutura própria</h3>
+                <p class="tab-description" data-i18n="s4.p2.desc">Cuidamos de toda a fabricação dos seus produtos com padrão profissional,
                   garantindo qualidade, consistência e segurança.</p>
                 <ul class="tab-list">
-                  <li>Produção com controle de qualidade</li>
-                  <li>Escala conforme o crescimento da sua marca</li>
-                  <li>Sem necessidade de estrutura própria</li>
+                  <li data-i18n="s4.p2.li1">Produção com controle de qualidade</li>
+                  <li data-i18n="s4.p2.li2">Escala conforme o crescimento da sua marca</li>
+                  <li data-i18n="s4.p2.li3">Sem necessidade de estrutura própria</li>
                 </ul>
               </div>
             </div>
@@ -566,13 +573,13 @@
                   alt="Mulher navegando em loja de cosméticos" loading="lazy" decoding="async">
               </div>
               <div class="tab-text">
-                <h3 class="tab-title">Foque no crescimento, não na operação</h3>
-                <p class="tab-description">Você foca em construir sua marca e vender, enquanto toda a base operacional
+                <h3 class="tab-title" data-i18n="s4.p3.title">Foque no crescimento, não na operação</h3>
+                <p class="tab-description" data-i18n="s4.p3.desc">Você foca em construir sua marca e vender, enquanto toda a base operacional
                   já está pronta para sustentar seu crescimento.</p>
                 <ul class="tab-list">
-                  <li>Liberdade para focar em marketing e vendas</li>
-                  <li>Mais controle sobre preço e margem</li>
-                  <li>Marca própria fortalecendo sua autoridade</li>
+                  <li data-i18n="s4.p3.li1">Liberdade para focar em marketing e vendas</li>
+                  <li data-i18n="s4.p3.li2">Mais controle sobre preço e margem</li>
+                  <li data-i18n="s4.p3.li3">Marca própria fortalecendo sua autoridade</li>
                 </ul>
               </div>
             </div>
@@ -587,13 +594,13 @@
                   alt="Cliente desembalando produto premium" loading="lazy" decoding="async">
               </div>
               <div class="tab-text">
-                <h3 class="tab-title">Entrega eficiente sem complicação</h3>
-                <p class="tab-description">Armazenamos e enviamos seus produtos diretamente para o cliente, garantindo
+                <h3 class="tab-title" data-i18n="s4.p4.title">Entrega eficiente sem complicação</h3>
+                <p class="tab-description" data-i18n="s4.p4.desc">Armazenamos e enviamos seus produtos diretamente para o cliente, garantindo
                   agilidade e uma experiência profissional.</p>
                 <ul class="tab-list">
-                  <li>Envio direto ao consumidor final</li>
-                  <li>Redução de custos e complexidade logística</li>
-                  <li>Operação pronta para escalar</li>
+                  <li data-i18n="s4.p4.li1">Envio direto ao consumidor final</li>
+                  <li data-i18n="s4.p4.li2">Redução de custos e complexidade logística</li>
+                  <li data-i18n="s4.p4.li3">Operação pronta para escalar</li>
                 </ul>
               </div>
             </div>
@@ -603,13 +610,13 @@
 
         <!-- Section 4 Footer CTA -->
         <div class="process-footer" data-reveal="fade-up-soft" data-delay="0">
-          <p class="process-footer-text">
+          <p class="process-footer-text" data-i18n="s4.footer">
             <span class="line-block">Se você quer sair da ideia e realmente colocar sua marca no mercado, essa é a forma
               mais simples</span>
             <span class="line-block">e segura de fazer isso hoje. Fale com nosso time e descubra como lançar sua marca
               de cosméticos.</span>
           </p>
-          <a href="#contato" class="btn btn-primary">
+          <a href="#contato" class="btn btn-primary" data-i18n="cta.talk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -661,10 +668,10 @@
       <div class="container relative-container">
         <!-- Glassmorphism Card -->
         <div class="glass-card">
-          <span class="glass-badge" data-reveal="fade-in" data-delay="0">PERSONALIZAÇÃO</span>
-          <h2 class="glass-title" data-reveal="fade-in" data-delay="140">Quer ver como o seu produto<br>ficaria na
+          <span class="glass-badge" data-reveal="fade-in" data-delay="0" data-i18n="s5.badge">PERSONALIZAÇÃO</span>
+          <h2 class="glass-title" data-reveal="fade-in" data-delay="140" data-i18n="s5.title">Quer ver como o seu produto<br>ficaria na
             prática?</h2>
-          <p class="glass-description" data-reveal="fade-in" data-delay="280">
+          <p class="glass-description" data-reveal="fade-in" data-delay="280" data-i18n="s5.desc">
             <span class="line-block">Preencha o formulário abaixo e envie sua logo para nós.</span>
             <span class="line-block">Nossa equipe irá criar um mockup personalizado pra você.</span>
           </p>
@@ -673,7 +680,7 @@
           <form class="glass-form" id="mockupForm" action="#" method="POST">
             <div class="form-row form-row-top">
               <div class="form-group">
-                <label for="formNome">Nome</label>
+                <label for="formNome" data-i18n="s5.form.name">Nome</label>
                 <input type="text" id="formNome" name="nome" placeholder="Nome" required>
               </div>
               <div class="form-group">
@@ -688,19 +695,19 @@
 
             <div class="form-row form-row-bottom">
               <div class="form-group form-group-color">
-                <label for="formCor">Cor principal</label>
+                <label for="formCor" data-i18n="s5.form.color">Cor principal</label>
                 <input type="text" id="formCor" name="cor" placeholder="Insira o código aqui. Exemplo: #3E4095">
               </div>
               <div class="form-group form-group-file">
-                <label for="formLogo">Sua logo</label>
+                <label for="formLogo" data-i18n="s5.form.logo">Sua logo</label>
                 <div class="file-input-wrapper">
                   <input type="file" id="formLogo" name="logo" accept="image/*,.pdf,.ai,.psd" class="file-input-hidden">
-                  <label for="formLogo" class="file-input-btn">Escolher arquivo</label>
-                  <span class="file-input-name" id="fileName">Nenhum arquivo escolhido</span>
+                  <label for="formLogo" class="file-input-btn" data-i18n="s5.form.choose">Escolher arquivo</label>
+                  <span class="file-input-name" id="fileName" data-i18n="s5.form.nofile">Nenhum arquivo escolhido</span>
                 </div>
               </div>
               <div class="form-group form-group-btn">
-                <button type="submit" class="btn btn-primary form-submit-btn">Enviar</button>
+                <button type="submit" class="btn btn-primary form-submit-btn" data-i18n="s5.form.submit">Enviar</button>
               </div>
             </div>
           </form>
@@ -713,18 +720,18 @@
       <div class="container">
         <!-- Section 6 Centered Header -->
         <div class="brand-header">
-          <span class="brand-badge" data-reveal="fade-in" data-delay="0">SUA MARCA, DO SEU JEITO</span>
-          <h2 class="brand-title" data-reveal="fade-in" data-delay="140">Você imagina, a gente<br>transforma em produto.
+          <span class="brand-badge" data-reveal="fade-in" data-delay="0" data-i18n="s6.badge">SUA MARCA, DO SEU JEITO</span>
+          <h2 class="brand-title" data-reveal="fade-in" data-delay="140" data-i18n="s6.title">Você imagina, a gente<br>transforma em produto.
           </h2>
-          <p class="brand-subtitle" data-reveal="fade-in" data-delay="280">Desenvolvemos cosméticos sob medida para a
+          <p class="brand-subtitle" data-reveal="fade-in" data-delay="280" data-i18n="s6.subtitle">Desenvolvemos cosméticos sob medida para a
             sua marca, da ideia à fórmula final.</p>
 
           <div class="brand-footer-bar" data-reveal="fade-up-soft" data-delay="420">
-            <p class="brand-footer-text">
+            <p class="brand-footer-text" data-i18n="s6.footer">
               <span class="line-block">Você não precisa adaptar seu sonho a um catálogo pronto. Aqui, o</span>
               <span class="line-block">produto nasce com a sua identidade, seu público e seu posicionamento.</span>
             </p>
-            <a href="#contato" class="btn btn-primary">
+            <a href="#contato" class="btn btn-primary" data-i18n="cta.talk">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                 stroke-linejoin="round">
                 <path
@@ -826,10 +833,10 @@
       <div class="container">
         <!-- Section 7 Centered Header -->
         <div class="how-header">
-          <span class="how-badge" data-reveal="fade-in" data-delay="0">COMO FUNCIONA</span>
-          <h2 class="how-title" data-reveal="fade-in" data-delay="140">Criar sua própria linha de cosméticos <br
+          <span class="how-badge" data-reveal="fade-in" data-delay="0" data-i18n="s7.badge">COMO FUNCIONA</span>
+          <h2 class="how-title" data-reveal="fade-in" data-delay="140" data-i18n="s7.title">Criar sua própria linha de cosméticos <br
               class="desktop-only">é mais simples do que parece</h2>
-          <p class="how-subtitle" data-reveal="fade-in" data-delay="280">
+          <p class="how-subtitle" data-reveal="fade-in" data-delay="280" data-i18n="s7.subtitle">
             Nós cuidamos de todo o processo, do conceito à produção. Você foca na sua marca, enquanto a gente transforma
             sua ideia em um produto pronto para o mercado.
           </p>
@@ -839,8 +846,8 @@
         <div class="how-steps-grid">
           <div class="step-card" data-reveal="fade-up-soft" data-delay="420">
             <div class="step-badge">1</div>
-            <h3 class="step-title">Apresente a sua ideia</h3>
-            <p class="step-text">
+            <h3 class="step-title" data-i18n="s7.step1.title">Apresente a sua ideia</h3>
+            <p class="step-text" data-i18n="s7.step1.text">
               Preencha o formulário especificando o que você pretende atender em público e objetivos. Com essas
               informações, conseguimos entender exatamente o que você quer construir.
             </p>
@@ -848,8 +855,8 @@
 
           <div class="step-card" data-reveal="fade-up-soft" data-delay="560">
             <div class="step-badge">2</div>
-            <h3 class="step-title">Desenvolvemos sua fórmula e conceito</h3>
-            <p class="step-text">
+            <h3 class="step-title" data-i18n="s7.step2.title">Desenvolvemos sua fórmula e conceito</h3>
+            <p class="step-text" data-i18n="s7.step2.text">
               Nossa equipe cria uma proposta personalizada com formulação, características do produto e direcionamento
               da sua linha.
             </p>
@@ -857,8 +864,8 @@
 
           <div class="step-card" data-reveal="fade-up-soft" data-delay="700">
             <div class="step-badge">3</div>
-            <h3 class="step-title">Produção e entrega da sua marca</h3>
-            <p class="step-text">
+            <h3 class="step-title" data-i18n="s7.step3.title">Produção e entrega da sua marca</h3>
+            <p class="step-text" data-i18n="s7.step3.text">
               Após aprovação, iniciamos a produção e entregamos seu produto pronto para venda, com qualidade e padrão
               profissional.
             </p>
@@ -867,13 +874,13 @@
 
         <!-- Section 7 Footer CTA -->
         <div class="how-footer" data-reveal="fade-up-soft" data-delay="0">
-          <p class="how-footer-text">
+          <p class="how-footer-text" data-i18n="s7.footer">
             <span class="line-block">Se você quer sair da ideia e realmente colocar sua marca no mercado, essa é a forma
               mais simples</span>
             <span class="line-block">e segura de fazer isso hoje. Fale com nosso time e descubra como lançar sua marca
               de cosméticos.</span>
           </p>
-          <a href="#contato" class="btn btn-primary">
+          <a href="#contato" class="btn btn-primary" data-i18n="cta.talk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -890,14 +897,14 @@
       <div class="container start-now-container">
         <!-- Left Column: Copy & CTA -->
         <div class="start-now-left">
-          <span class="start-now-badge" data-reveal="fade-in" data-delay="0">COMECE AGORA MESMO</span>
-          <h2 class="start-now-title" data-reveal="fade-in" data-delay="140">Sua própria linha de cosméticos completa
+          <span class="start-now-badge" data-reveal="fade-in" data-delay="0" data-i18n="s8.badge">COMECE AGORA MESMO</span>
+          <h2 class="start-now-title" data-reveal="fade-in" data-delay="140" data-i18n="s8.title">Sua própria linha de cosméticos completa
           </h2>
-          <p class="start-now-description" data-reveal="fade-in" data-delay="280">
+          <p class="start-now-description" data-reveal="fade-in" data-delay="280" data-i18n="s8.desc">
             Desenvolvemos diferentes tipos de produtos para que você possa construir uma marca sólida, alinhada ao seu
             público e pronta para crescer.
           </p>
-          <a href="#contato" class="btn btn-primary" data-reveal="fade-up-soft" data-delay="420">
+          <a href="#contato" class="btn btn-primary" data-reveal="fade-up-soft" data-delay="420" data-i18n="cta.talk">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -1013,10 +1020,10 @@
 
         <!-- Section Header (Centered) -->
         <div class="contact-header">
-          <span class="contact-badge" data-reveal="fade-in" data-delay="0">COMECE SUA MARCA AGORA</span>
-          <h2 class="contact-title" data-reveal="fade-in" data-delay="140">Dê o primeiro passo para criar <br
+          <span class="contact-badge" data-reveal="fade-in" data-delay="0" data-i18n="s9.badge">COMECE SUA MARCA AGORA</span>
+          <h2 class="contact-title" data-reveal="fade-in" data-delay="140" data-i18n="s9.title">Dê o primeiro passo para criar <br
               class="desktop-only">sua marca de cosméticos</h2>
-          <p class="contact-description" data-reveal="fade-in" data-delay="280">
+          <p class="contact-description" data-reveal="fade-in" data-delay="280" data-i18n="s9.desc">
             Preencha o formulário e nossa equipe vai te mostrar como transformar sua ideia em uma marca pronta para
             vender.
           </p>
@@ -1038,7 +1045,7 @@
             <line x1="12" y1="8" x2="12" y2="12" />
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
-          <p class="contact-notice-text">Nosso mínimo de produção é a partir de <strong>300 unidades</strong> por cada
+          <p class="contact-notice-text" data-i18n="s9.notice">Nosso mínimo de produção é a partir de <strong>300 unidades</strong> por cada
             produto.</p>
         </div>
 
@@ -1052,8 +1059,8 @@
         <!-- FAQ Header -->
         <div class="faq-header">
           <span class="faq-badge" data-reveal="fade-in" data-delay="0">FAQ</span>
-          <h2 class="faq-title" data-reveal="fade-in" data-delay="140">Perguntas Frequentes</h2>
-          <p class="faq-subtitle" data-reveal="fade-in" data-delay="280">
+          <h2 class="faq-title" data-reveal="fade-in" data-delay="140" data-i18n="s10.title">Perguntas Frequentes</h2>
+          <p class="faq-subtitle" data-reveal="fade-in" data-delay="280" data-i18n="s10.subtitle">
             Sabemos que começar algo novo gera dúvidas, por isso reunimos aqui as principais respostas para te ajudar a
             entender como tudo funciona.
           </p>
@@ -1062,40 +1069,40 @@
         <!-- FAQ Grid (3 columns x 2 rows) -->
         <div class="faq-grid">
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="420">
-            <h3 class="faq-question">Preciso ter experiência com cosméticos para começar?</h3>
-            <p class="faq-answer">Não. Você não precisa de conhecimento técnico ou experiência na área. Nós cuidamos de
+            <h3 class="faq-question" data-i18n="s10.q1">Preciso ter experiência com cosméticos para começar?</h3>
+            <p class="faq-answer" data-i18n="s10.a1">Não. Você não precisa de conhecimento técnico ou experiência na área. Nós cuidamos de
               todo o desenvolvimento e produção, enquanto você foca na construção da sua marca e nas vendas.</p>
           </div>
 
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="490">
-            <h3 class="faq-question">Preciso já ter uma marca definida?</h3>
-            <p class="faq-answer">Não necessariamente. Você pode chegar apenas com uma ideia inicial, e nós te ajudamos
+            <h3 class="faq-question" data-i18n="s10.q2">Preciso já ter uma marca definida?</h3>
+            <p class="faq-answer" data-i18n="s10.a2">Não necessariamente. Você pode chegar apenas com uma ideia inicial, e nós te ajudamos
               a estruturar os produtos de acordo com o público e o posicionamento que deseja construir.</p>
           </div>
 
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="560">
-            <h3 class="faq-question">É necessário um grande investimento para começar?</h3>
-            <p class="faq-answer">Não. Hoje existem modelos mais acessíveis que permitem começar sem precisar montar
+            <h3 class="faq-question" data-i18n="s10.q3">É necessário um grande investimento para começar?</h3>
+            <p class="faq-answer" data-i18n="s10.a3">Não. Hoje existem modelos mais acessíveis que permitem começar sem precisar montar
               fábrica ou investir em grandes estruturas. O investimento depende do tipo de produto e da escala inicial.
             </p>
           </div>
 
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="420">
-            <h3 class="faq-question">Posso personalizar os produtos ou são todos iguais?</h3>
-            <p class="faq-answer">Sim, os produtos são desenvolvidos de forma personalizada. As fórmulas,
+            <h3 class="faq-question" data-i18n="s10.q4">Posso personalizar os produtos ou são todos iguais?</h3>
+            <p class="faq-answer" data-i18n="s10.a4">Sim, os produtos são desenvolvidos de forma personalizada. As fórmulas,
               características e proposta podem ser adaptadas para refletir a identidade da sua marca.</p>
           </div>
 
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="490">
-            <h3 class="faq-question">Como funciona a entrega dos produtos?</h3>
-            <p class="faq-answer">Nós cuidamos de toda a parte logística. Os produtos podem ser enviados diretamente
+            <h3 class="faq-question" data-i18n="s10.q5">Como funciona a entrega dos produtos?</h3>
+            <p class="faq-answer" data-i18n="s10.a5">Nós cuidamos de toda a parte logística. Os produtos podem ser enviados diretamente
               para você ou para o cliente final, facilitando a operação e permitindo que você escale sem se preocupar
               com envio.</p>
           </div>
 
           <div class="faq-item" data-reveal="fade-up-soft" data-delay="560">
-            <h3 class="faq-question">Em quanto tempo posso começar a vender?</h3>
-            <p class="faq-answer">O prazo pode variar de acordo com o tipo de produto e nível de personalização, mas
+            <h3 class="faq-question" data-i18n="s10.q6">Em quanto tempo posso começar a vender?</h3>
+            <p class="faq-answer" data-i18n="s10.a6">O prazo pode variar de acordo com o tipo de produto e nível de personalização, mas
               todo o processo é estruturado para ser ágil e permitir que você lance sua marca no menor tempo possível.
             </p>
           </div>
@@ -1103,9 +1110,9 @@
 
         <!-- FAQ Footer CTA -->
         <div class="faq-footer" data-reveal="fade-up-soft" data-delay="0">
-          <h3 class="faq-footer-title">Ainda tem dúvidas?</h3>
-          <p class="faq-footer-text">Toque no botão abaixo e <strong>entre</strong> em contato.</p>
-          <a href="#contato" class="btn btn-primary faq-btn">
+          <h3 class="faq-footer-title" data-i18n="s10.faq_footer_title">Ainda tem dúvidas?</h3>
+          <p class="faq-footer-text" data-i18n="s10.faq_footer_text">Toque no botão abaixo e <strong>entre</strong> em contato.</p>
+          <a href="#contato" class="btn btn-primary faq-btn" data-i18n="s10.faq_footer_cta">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round">
               <path
@@ -1124,7 +1131,7 @@
         <a href="#" class="footer-logo-link">
           <img src="LOGO-FIGUS-BRANCA.webp" alt="Figus" class="footer-logo-img">
         </a>
-        <p class="footer-copyright">Todos os direitos reservados Figus®</p>
+        <p class="footer-copyright" data-i18n="footer.copy">Todos os direitos reservados Figus®</p>
       </div>
     </footer>
 
