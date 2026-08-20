@@ -251,13 +251,60 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ---------------------------------------------------------------------------
-  // 5. SECTION 5: FILE INPUT
+  // 5. SECTION 5: FILE INPUT & FORM SUBMISSION (figus@figus.com.br)
   // ---------------------------------------------------------------------------
+  const mockupForm = document.getElementById('mockupForm');
   const formLogo = document.getElementById('formLogo');
   const fileNameDisplay = document.getElementById('fileName');
+  const mockupFeedback = document.getElementById('mockupFeedback');
+  const formSubmitBtn = document.getElementById('formSubmitBtn');
+
   if (formLogo && fileNameDisplay) {
     formLogo.addEventListener('change', (e) => {
       fileNameDisplay.textContent = e.target.files?.[0]?.name || 'Nenhum arquivo escolhido';
+    });
+  }
+
+  if (mockupForm && mockupFeedback && formSubmitBtn) {
+    mockupForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const currentLang = localStorage.getItem('figus-lang') || 'pt';
+      const dict = translations[currentLang] || translations.pt;
+
+      const originalBtnText = formSubmitBtn.textContent;
+      formSubmitBtn.disabled = true;
+      formSubmitBtn.textContent = dict['s5.form.sending'] || 'Enviando...';
+      mockupFeedback.style.display = 'none';
+      mockupFeedback.className = 'form-feedback';
+
+      try {
+        const formData = new FormData(mockupForm);
+        const response = await fetch('https://formsubmit.co/ajax/figus@figus.com.br', {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          mockupFeedback.textContent = dict['s5.form.success'] || 'Solicitação enviada com sucesso! Em breve entraremos em contato.';
+          mockupFeedback.classList.add('is-success');
+          mockupFeedback.style.display = 'block';
+          mockupForm.reset();
+          if (fileNameDisplay) fileNameDisplay.textContent = dict['s5.form.nofile'] || 'Nenhum arquivo escolhido';
+        } else {
+          throw new Error('Falha no envio');
+        }
+      } catch (err) {
+        mockupFeedback.textContent = dict['s5.form.error'] || 'Ocorreu um erro ao enviar. Por favor, tente novamente.';
+        mockupFeedback.classList.add('is-error');
+        mockupFeedback.style.display = 'block';
+      } finally {
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.textContent = originalBtnText;
+      }
     });
   }
 
@@ -353,6 +400,7 @@ document.addEventListener('DOMContentLoaded', () => {
       's5.desc': 'Preencha o formulário abaixo e envie sua logo para nós. Nossa equipe irá criar um mockup personalizado pra você.',
       's5.form.name': 'Nome', 's5.form.color': 'Cor principal', 's5.form.logo': 'Sua logo',
       's5.form.choose': 'Escolher arquivo', 's5.form.nofile': 'Nenhum arquivo escolhido', 's5.form.submit': 'Enviar',
+      's5.form.sending': 'Enviando...', 's5.form.success': 'Solicitação enviada com sucesso! Em breve entraremos em contato.', 's5.form.error': 'Ocorreu um erro ao enviar. Por favor, tente novamente.',
       // S6
       's6.badge': 'SUA MARCA, DO SEU JEITO', 's6.title': 'Você imagina, a gente transforma em produto.',
       's6.subtitle': 'Desenvolvemos cosméticos sob medida para a sua marca, da ideia à fórmula final.',
@@ -425,6 +473,7 @@ document.addEventListener('DOMContentLoaded', () => {
       's5.desc': 'Fill out the form below and send us your logo. Our team will create a personalized mockup for you.',
       's5.form.name': 'Name', 's5.form.color': 'Main color', 's5.form.logo': 'Your logo',
       's5.form.choose': 'Choose file', 's5.form.nofile': 'No file chosen', 's5.form.submit': 'Submit',
+      's5.form.sending': 'Sending...', 's5.form.success': 'Request sent successfully! We will contact you soon.', 's5.form.error': 'An error occurred while sending. Please try again.',
       's6.badge': 'YOUR BRAND, YOUR WAY', 's6.title': 'You imagine it, we turn it into a product.',
       's6.subtitle': 'We develop custom cosmetics for your brand, from idea to final formula.',
       's6.footer': 'You don\'t need to adapt your dream to a ready-made catalog. Here, the product is born with your identity, your audience and your positioning.',
@@ -491,6 +540,7 @@ document.addEventListener('DOMContentLoaded', () => {
       's5.desc': 'Rellena el formulario y envíanos tu logo. Nuestro equipo creará un mockup personalizado para ti.',
       's5.form.name': 'Nombre', 's5.form.color': 'Color principal', 's5.form.logo': 'Tu logo',
       's5.form.choose': 'Elegir archivo', 's5.form.nofile': 'Ningún archivo seleccionado', 's5.form.submit': 'Enviar',
+      's5.form.sending': 'Enviando...', 's5.form.success': '¡Solicitud enviada con éxito! Pronto nos pondremos en contacto.', 's5.form.error': 'Ocurrió un error al enviar. Por favor, inténtelo de nuevo.',
       's6.badge': 'TU MARCA, A TU MANERA', 's6.title': 'Tú lo imaginas, nosotros lo convertimos en producto.',
       's6.subtitle': 'Desarrollamos cosméticos a medida para tu marca, de la idea a la fórmula final.',
       's6.footer': 'No necesitas adaptar tu sueño a un catálogo listo. Aquí, el producto nace con tu identidad, tu público y tu posicionamiento.',

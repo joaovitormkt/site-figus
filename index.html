@@ -688,7 +688,13 @@
           </p>
 
           <!-- White Form Container -->
-          <form class="glass-form" id="mockupForm" action="#" method="POST">
+          <form class="glass-form" id="mockupForm" action="https://formsubmit.co/figus@figus.com.br" method="POST" enctype="multipart/form-data">
+            <!-- FormSubmit Configuration -->
+            <input type="hidden" name="_subject" value="Novo Mockup Solicitado - Site Figus">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_autoresponse" value="Recebemos sua solicitação de mockup na Figus! Em breve nossa equipe entrará em contato.">
+
             <div class="form-row form-row-top">
               <div class="form-group">
                 <label for="formNome" data-i18n="s5.form.name">Nome</label>
@@ -718,9 +724,12 @@
                 </div>
               </div>
               <div class="form-group form-group-btn">
-                <button type="submit" class="btn btn-primary form-submit-btn" data-i18n="s5.form.submit">Enviar</button>
+                <button type="submit" class="btn btn-primary form-submit-btn" id="formSubmitBtn" data-i18n="s5.form.submit">Enviar</button>
               </div>
             </div>
+
+            <!-- Feedback Message -->
+            <div class="form-feedback" id="mockupFeedback" role="alert" style="display: none;"></div>
           </form>
         </div>
       </div>

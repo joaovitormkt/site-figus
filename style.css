@@ -1670,6 +1670,41 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: all 0.25s ease;
+}
+
+.form-submit-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Form Feedback Notice */
+.form-feedback {
+  padding: 14px 18px;
+  border-radius: 8px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.45;
+  text-align: center;
+  animation: fadeIn 0.35s ease;
+}
+
+.form-feedback.is-success {
+  background-color: #e8f7ee;
+  color: #12753a;
+  border: 1px solid #c2ebd1;
+}
+
+.form-feedback.is-error {
+  background-color: #fdeeee;
+  color: #d32f2f;
+  border: 1px solid #f9c6c6;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* --- Section 6: Custom Brand & Vertical Image Carousel --- */
