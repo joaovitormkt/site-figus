@@ -195,27 +195,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 2. SECTION 3 VIDEO CONTROL
+  // 2. SECTION 3 VIDEO COVER & PLAY TRIGGER
   // ---------------------------------------------------------------------------
-  const sectionVideo = document.getElementById('sectionVideo');
-  const secVideoToggleBtn = document.getElementById('sectionVideoToggle');
-  const secPlayIcon = document.getElementById('secPlayIcon');
-  const secPauseIcon = document.getElementById('secPauseIcon');
+  const videoCover = document.getElementById('videoCover');
+  const vimeoPlayer = document.getElementById('vimeoPlayer');
 
-  if (sectionVideo && secVideoToggleBtn) {
-    secVideoToggleBtn.addEventListener('click', () => {
-      if (sectionVideo.paused) {
-        sectionVideo.muted = false;
-        sectionVideo.play().then(() => {
-          secPlayIcon.style.display = 'none';
-          secPauseIcon.style.display = 'block';
-          secVideoToggleBtn.setAttribute('aria-label', 'Pausar vídeo');
-        }).catch(err => console.log('Video play error:', err));
-      } else {
-        sectionVideo.pause();
-        secPlayIcon.style.display = 'block';
-        secPauseIcon.style.display = 'none';
-        secVideoToggleBtn.setAttribute('aria-label', 'Reproduzir vídeo');
+  if (videoCover && vimeoPlayer) {
+    const playVideo = () => {
+      videoCover.classList.add('is-hidden');
+      let src = vimeoPlayer.getAttribute('src') || '';
+      if (!src.includes('autoplay=1')) {
+        src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
+        vimeoPlayer.setAttribute('src', src);
+      }
+    };
+
+    videoCover.addEventListener('click', playVideo);
+    videoCover.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        playVideo();
       }
     });
   }

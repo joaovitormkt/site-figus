@@ -1092,6 +1092,130 @@ body {
   display: block;
 }
 
+/* Video Poster / Cover Overlay */
+.video-cover {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
+  user-select: none;
+  background-color: #0d0e15;
+}
+
+.video-cover.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.video-cover-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), filter 0.8s ease;
+}
+
+.video-cover-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(10, 11, 16, 0.2) 0%, rgba(10, 11, 16, 0.65) 100%);
+  transition: background 0.4s ease;
+}
+
+/* Play Button with Glow & Pulse Effect */
+.video-play-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(62, 64, 149, 0.9);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 35px rgba(62, 64, 149, 0.7), 0 12px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  z-index: 2;
+  transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275), background 0.3s ease, box-shadow 0.3s ease;
+  pointer-events: none;
+}
+
+.video-play-btn::before {
+  content: '';
+  position: absolute;
+  inset: -12px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  animation: playPulse 2.4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+  pointer-events: none;
+}
+
+@keyframes playPulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}
+
+.video-play-btn svg {
+  width: 32px;
+  height: 32px;
+  margin-left: 4px; /* Optical center compensation */
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.4));
+  transition: transform 0.3s ease;
+}
+
+/* Hover States */
+.video-cover:hover .video-cover-img {
+  transform: scale(1.035);
+  filter: brightness(1.05);
+}
+
+.video-cover:hover .video-cover-overlay {
+  background: radial-gradient(circle at center, rgba(10, 11, 16, 0.1) 0%, rgba(10, 11, 16, 0.5) 100%);
+}
+
+.video-cover:hover .video-play-btn {
+  transform: translate(-50%, -50%) scale(1.12);
+  background: #3E4095;
+  box-shadow: 0 0 50px rgba(62, 64, 149, 1), 0 16px 40px rgba(0, 0, 0, 0.6);
+  border-color: #ffffff;
+}
+
+.video-cover:hover .video-play-btn svg {
+  transform: scale(1.08);
+}
+
+@media (max-width: 768px) {
+  .video-play-btn {
+    width: 68px;
+    height: 68px;
+  }
+  .video-play-btn svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
 /* Market Section Footer Bar */
 .market-footer {
   display: flex;
