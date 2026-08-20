@@ -195,18 +195,39 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ---------------------------------------------------------------------------
-  // 2. SECTION 3 VIDEO COVER & PLAY TRIGGER
+  // 2. SECTION 3 VIDEO COVER & PLAY TRIGGER (Reexibe a capa ao terminar)
   // ---------------------------------------------------------------------------
   const videoCover = document.getElementById('videoCover');
   const vimeoPlayer = document.getElementById('vimeoPlayer');
 
   if (videoCover && vimeoPlayer) {
+    let player = null;
+
+    // Inicializa o player com o SDK do Vimeo se disponível
+    if (typeof Vimeo !== 'undefined' && Vimeo.Player) {
+      player = new Vimeo.Player(vimeoPlayer);
+      player.on('ended', () => {
+        videoCover.classList.remove('is-hidden');
+        player.setCurrentTime(0).catch(() => {});
+      });
+    }
+
     const playVideo = () => {
       videoCover.classList.add('is-hidden');
-      let src = vimeoPlayer.getAttribute('src') || '';
-      if (!src.includes('autoplay=1')) {
-        src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
-        vimeoPlayer.setAttribute('src', src);
+      if (player) {
+        player.play().catch(() => {
+          let src = vimeoPlayer.getAttribute('src') || '';
+          if (!src.includes('autoplay=1')) {
+            src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
+            vimeoPlayer.setAttribute('src', src);
+          }
+        });
+      } else {
+        let src = vimeoPlayer.getAttribute('src') || '';
+        if (!src.includes('autoplay=1')) {
+          src += (src.includes('?') ? '&' : '?') + 'autoplay=1';
+          vimeoPlayer.setAttribute('src', src);
+        }
       }
     };
 
@@ -216,6 +237,17 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         playVideo();
       }
+    });
+
+    // Fallback: escuta mensagens postMessage do iframe do Vimeo
+    window.addEventListener('message', (e) => {
+      try {
+        const data = typeof e.data === 'string' ? JSON.parse(e.data) : e.data;
+        if (data && (data.event === 'finish' || data.event === 'ended')) {
+          videoCover.classList.remove('is-hidden');
+          if (player) player.setCurrentTime(0).catch(() => {});
+        }
+      } catch (err) {}
     });
   }
 
